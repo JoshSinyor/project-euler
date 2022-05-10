@@ -2,17 +2,16 @@
 
 require 'solution'
 
-# Problem 6: Sum Square Difference
-# The sum of the squares of the first ten natural numbers is,
-#  1^2 + 2^2 + ... + 10^2 = 385
-# The square of the sum of the first ten natural numbers is,
-# (1 + 2 + ... + 10)^2 = 55^2 = 3025
-# Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is,
-# 3025 - 385 = 2640
-# Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+# Problem 5: Smallest Multiple
+# 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+# What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 describe 'solution' do
-  it 'returns the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum' do
-    expect(solution).to eq 25_164_150
+  it 'returns the smallest positive number evenly divisible by all numbers from 1 to 10' do
+    expect(solution(1..10)).to eq 2520
+  end
+
+  it 'returns the smallest positive number evenly divisible by all numbers from 1 to 20' do
+    expect(solution(1..20)).to eq 232_792_560
   end
 end

@@ -1,23 +1,28 @@
 # frozen_string_literal: true
 
-def solution
-  sum_of_squares = (1..100).sum { |x| x**2 }
-  square_of_sum = (1..100).sum**2
-  (sum_of_squares - square_of_sum).abs
+def solution(input_range)
+  input_range.inject(1) { |result, n| result.lcm n }
 end
 
-# Alternate solution using variables
+# Alternate brute-force solution
 
-# def solution
-#   sum_of_squares = 0
+# def solution(input_range)
+#   i = 0
 
-#   (1..100).each { |x| sum_of_squares += x**2 }
+#   loop do
+#     i += 20
 
-#   square_of_sum = 0
+#     next if i % 19 != 0
+#     next if i % 18 != 0
+#     next if i % 17 != 0
+#     next if i % 16 != 0
+#     next if i % 15 != 0
+#     next if i % 14 != 0
+#     next if i % 13 != 0
+#     next if i % 11 != 0
 
-#   (1..100).each { |x| square_of_sum += x }
+#     break
+#   end
 
-#   square_of_sum **= 2
-
-#   (sum_of_squares - square_of_sum).abs
+#   i
 # end
