@@ -2,16 +2,16 @@
 
 require 'solution'
 
-# Problem 5: Smallest Multiple
-# 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-# What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+# Problem 3: Largest Prime Factor
+# The prime factors of 13195 are 5, 7, 13 and 29.
+# What is the largest prime factor of the number 600851475143?
 
 describe 'solution' do
-  it 'returns the smallest positive number evenly divisible by all numbers from 1 to 10' do
-    expect(solution(1..10)).to eq 2520
+  it 'returns the largest prime factor of 13195' do
+    expect(solution(13_195)).to eq 29
   end
 
-  it 'returns the smallest positive number evenly divisible by all numbers from 1 to 20' do
-    expect(solution(1..20)).to eq 232_792_560
+  it 'returns the largest prime factor of 600851475143' do
+    expect(solution(600_851_475_143)).to eq 6857
   end
 end
